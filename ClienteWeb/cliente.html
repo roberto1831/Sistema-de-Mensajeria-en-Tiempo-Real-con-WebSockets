@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente WebSocket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f3f3f3;
+        }
+
+        input, textarea {
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+        }
+
+        #mensajes {
+            white-space: pre-line;
+            background: #fff;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cliente WebSocket</h2>
+
+    <label>Tu Nombre:</label>
+    <input type="text" id="usuario" placeholder="Ej: roberto">
+
+    <label>Para (destinatario):</label>
+    <input type="text" id="para" placeholder="Ej: juan">
+
+    <label>Mensaje:</label>
+    <textarea id="mensaje" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+    <button onclick="enviarMensaje()">Enviar</button>
+    <button onclick="cerrarConexion()">Cerrar conexión</button>
+
+    <div id="mensajes"></div>
+
+    <script>
+        let socket;
+        let nombreUsuario = "";
+
+        function conectar() {
+            const nombre = document.getElementById("usuario").value.trim();
+            if (!nombre) return alert("Ingresa tu nombre primero");
+
+            nombreUsuario = nombre;
+            socket = new WebSocket("ws://127.0.0.1:7891/Chat");
+
+            socket.onopen = () => {
+                socket.send(`De: ${nombreUsuario}\nLOGIN`);
+                log(`Conectado como ${nombreUsuario}`);
+            };
+
+            socket.onmessage = (event) => {
+                log(`Respuesta del servidor: ${event.data}`);
+            };
+
+            socket.onclose = () => {
+                log("Conexión cerrada");
+            };
+
+            socket.onerror = (error) => {
+                log("Error en la conexión");
+            };
+        }
+
+        function enviarMensaje() {
+            const destinatario = document.getElementById("para").value.trim();
+            const contenido = document.getElementById("mensaje").value.trim();
+
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                conectar();
+                setTimeout(() => enviarMensaje(), 500);
+                return;
+            }
+
+            if (!destinatario || !contenido) {
+                alert("Completa el destinatario y el mensaje");
+                return;
+            }
+
+            const mensaje = `De: ${nombreUsuario}\nPara: ${destinatario}\nMensaje: ${contenido}`;
+            socket.send(mensaje);
+            log(`Tú → ${destinatario}: ${contenido}`);
+            document.getElementById("mensaje").value = "";
+        }
+
+        function cerrarConexion() {
+            if (socket) {
+                socket.close();
+            }
+        }
+
+        function log(texto) {
+            const salida = document.getElementById("mensajes");
+            salida.innerText += texto + "\n";
+            salida.scrollTop = salida.scrollHeight;
+        }
+    </script>
+</body>
+</html>

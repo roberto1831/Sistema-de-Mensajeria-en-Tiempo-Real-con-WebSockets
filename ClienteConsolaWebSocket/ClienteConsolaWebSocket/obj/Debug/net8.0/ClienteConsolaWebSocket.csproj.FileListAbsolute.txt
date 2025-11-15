@@ -1,0 +1,17 @@
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\ClienteConsolaWebSocket.exe
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\ClienteConsolaWebSocket.deps.json
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\ClienteConsolaWebSocket.runtimeconfig.json
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\ClienteConsolaWebSocket.dll
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\ClienteConsolaWebSocket.pdb
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\bin\Debug\net8.0\websocket-sharp.dll
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.csproj.AssemblyReference.cache
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.AssemblyInfoInputs.cache
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.AssemblyInfo.cs
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.csproj.CoreCompileInputs.cache
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteC.DEDAEB87.Up2Date
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.dll
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\refint\ClienteConsolaWebSocket.dll
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.pdb
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ClienteConsolaWebSocket.genruntimeconfig.cache
+C:\Cliente_web\ClienteConsolaWebSocket\ClienteConsolaWebSocket\obj\Debug\net8.0\ref\ClienteConsolaWebSocket.dll
